@@ -26,7 +26,7 @@ namespace BoneHurtingBullets
 
         private void OnPlayerDamage(Player player, ref EDeathCause cause, ref ELimb limb, ref CSteamID killer, ref Vector3 direction, ref float damage, ref float times, ref bool canDamage)
         {
-            if (cause != EDeathCause.GUN || cause != EDeathCause.PUNCH || cause != EDeathCause.MELEE)
+            if (cause != EDeathCause.GUN && cause != EDeathCause.PUNCH && cause != EDeathCause.MELEE)
                 return;
 
             var limbName = limb.ToString();
